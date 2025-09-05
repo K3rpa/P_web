@@ -15,7 +15,7 @@ export default function App() {
         duration: reduce ? 0 : 0.5,
         ease: "easeOut",
         staggerChildren: reduce ? 0 : 0.15,
-        delayChildren: reduce ? 0 : 1,
+        delayChildren: reduce ? 0 : 0.5,
       },
     }),
   };
