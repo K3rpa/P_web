@@ -31,7 +31,7 @@
 }
 
 .center {
-  background: #ffffff;
+  background: #fff7f0;
   border-right: 1px solid #e0e0e0;
 }
 
@@ -84,7 +84,7 @@
 /* ===== Skillbar ===== */
 .skillbar {
   padding: 18px 14px;
-  background: #ffffff;
+  background: #fff7f0;
 }
 
 .skillbarBody {
@@ -260,4 +260,132 @@
   .content.left::after,
   .content.right::after { display: none; }
   .stageNum { margin-bottom: 4px; }
+}
+
+
+/* ===== Skills by Level (no percentages, fixed Y-axis) ===== */
+.skillsChart {
+  background: #fff7f0; 
+  border-top: 1px solid #e8e2db;
+  padding: 32px 16px;
+  font-family: "Inter","Segoe UI","Helvetica Neue",Arial,sans-serif;
+}
+
+.chartTitle {
+  margin: 0 0 24px 0;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #222;
+}
+
+/* Two-column layout: left = y-axis labels, right = bars area */
+.chartGrid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 16px;
+}
+
+/* Left axis labels aligned to bars */
+.yLabels {
+  position: relative;
+  height: 320px;
+  padding-right: 12px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.yLabels span {
+  position: absolute;
+  right: 12px; 
+  transform: translateY(-50%); 
+}
+
+.yLabels span:nth-child(1) {
+  top: 0;
+  transform: none; 
+}
+
+.yLabels span:nth-child(2) { top: 20%; }
+
+.yLabels span:nth-child(3) { top: 40%; }
+
+.yLabels span:nth-child(4) { top: 60%; }
+
+.yLabels span:nth-child(5) { top: 80%; }
+
+
+.bars {
+  position: relative;
+  height: 320px;                             
+  display: flex;
+  align-items: flex-end;                     
+  justify-content: space-around;
+  padding: 0 8px;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background:
+    linear-gradient(#eee 0 0) center 20% / 100% 1px no-repeat,
+    linear-gradient(#eee 0 0) center 40% / 100% 1px no-repeat,
+    linear-gradient(#eee 0 0) center 60% / 100% 1px no-repeat,
+    linear-gradient(#eee 0 0) center 80% / 100% 1px no-repeat;
+}
+
+.bar {
+  width: clamp(64px, 10vw, 110px);
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  display: inline-block;
+  background: #9CCBFF;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08) inset, 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.bar::after {
+  content: attr(data-skill);
+  position: absolute;
+  bottom: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #333;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.level-beginner   { height: 20%; }
+.level-advanced   { height: 40%; }
+.level-competent  { height: 60%; }
+.level-proficient { height: 80%; }
+.level-expert     { height: 100%; }
+
+.bar.cpp      { background: #9CCBFF; }
+.bar.python   { background: #FFE39C; }
+.bar.js       { background: #F4A3A3; }
+.bar.htmlcss  { background: #F2C27D; } 
+.bar.sql      { background: #AEE8C6; }
+
+@media (max-width: 720px) {
+  .chartGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .yLabels {
+    position: static;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+  }
+  .yLabels span {
+    position: static;
+    transform: none;
+    right: auto;
+  }
+  .bars {
+    height: 280px;
+  }
 }

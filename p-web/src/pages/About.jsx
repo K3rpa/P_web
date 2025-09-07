@@ -242,6 +242,90 @@ export default function About() {
           })()}
         </div>
       </section>
+      {/* ===== Skills by Level ===== */}
+      <section className="skillsChart" aria-labelledby="skills-title">
+        <h2 id="skills-title" className="chartTitle">Technical Skills</h2>
+
+        <div className="chartGrid">
+          {/* Left: Y-axis level labels */}
+          <div className="yLabels" aria-hidden="true">
+            <span>Expert</span>
+            <span>Proficient</span>
+            <span>Competent</span>
+            <span>Advanced</span>
+            <span>Beginner</span>
+          </div>
+
+          {/* Right: Bars */}
+          <motion.div
+            className="bars"
+            role="list"
+            aria-label="Skills and proficiency levels"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={{
+              visible: { transition: { staggerChildren: 0.6 } }
+            }}
+          >
+            {/* Each bar with rise-up effect */}
+            <motion.div
+              role="listitem"
+              className="bar cpp level-proficient"
+              data-skill="C++"
+              aria-label="C plus plus, Proficient"
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+              }}
+            />
+
+            <motion.div
+              role="listitem"
+              className="bar python level-proficient"
+              data-skill="Python"
+              aria-label="Python, Proficient"
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+              }}
+            />
+
+            <motion.div
+              role="listitem"
+              className="bar js level-beginner"
+              data-skill="JavaScript"
+              aria-label="JavaScript, Beginner"
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+              }}
+            />
+
+            <motion.div
+              role="listitem"
+              className="bar htmlcss level-advanced"
+              data-skill="HTML / CSS"
+              aria-label="HTML and CSS, Advanced"
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+              }}
+            />
+
+            <motion.div
+              role="listitem"
+              className="bar sql level-competent"
+              data-skill="SQL / NoSQL"
+              aria-label="SQL and NoSQL, Competent"
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+              }}
+            />
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 }
