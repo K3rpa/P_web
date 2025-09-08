@@ -36,7 +36,7 @@ export default function Navbar() {
       animate="visible"
     >
      <motion.img
-        src="/web_logo.png"
+        src={`${import.meta.env.BASE_URL}web_logo.png`}
         alt="logo"
         style={styles.logo}
         variants={itemVariants}
