@@ -35,7 +35,7 @@ export default function Navbar() {
       initial="hidden"
       animate="visible"
     >
-      <motion.img
+     <motion.img
         src="/web_logo.png"
         alt="logo"
         style={styles.logo}
