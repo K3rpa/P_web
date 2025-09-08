@@ -61,7 +61,7 @@ export default function About() {
           transition={commonTransition}
         >
           <motion.img
-            src="/web_home_self.jpg"
+            src={`${import.meta.env.BASE_URL}web_home_self.jpg`}
             alt="My portrait"
             className="photo"
             animate={{ scale: hover ? 0.96 : 1 }}
@@ -186,7 +186,7 @@ export default function About() {
                 <div className="stageRow">
                   <motion.div className="content left" {...appear(0.00)}>
                     <div className="stageNum">01</div>
-                    <img className="thumb" src="/cs2.jpg" alt="Favorite game" />
+                    <img className="thumb" src={`${import.meta.env.BASE_URL}cs2.jpg`} alt="Favorite game" />
                     <div>
                       <h3 className="stageHead">FAVORITE GAME</h3>
                       <p className="stageText">
@@ -201,7 +201,7 @@ export default function About() {
                   <div className="node" />
                   <motion.div className="content right" {...appear(0.15)}>
                     <div className="stageNum">02</div>
-                    <img className="thumb" src="/lizzy.jpg" alt="My dog" />
+                    <img className="thumb" src={`${import.meta.env.BASE_URL}lizzy.jpg`} alt="My dog" />
                     <div>
                       <h3 className="stageHead">MY DOG</h3>
                       <p className="stageText">
@@ -214,7 +214,7 @@ export default function About() {
                 <div className="stageRow">
                   <motion.div className="content left" {...appear(0.30)}>
                     <div className="stageNum">03</div>
-                    <img className="thumb" src="/cooking.jpg" alt="Cooking" />
+                    <img className="thumb" src={`${import.meta.env.BASE_URL}cooking.jpg`} alt="Cooking" />
                     <div>
                       <h3 className="stageHead">FAVORITE ACTIVITY</h3>
                       <p className="stageText">
@@ -228,7 +228,7 @@ export default function About() {
                   <div className="node" />
                   <motion.div className="content right" {...appear(0.45)}>
                     <div className="stageNum">04</div>
-                    <img className="thumb" src="/ideas.webp" alt="Wild ideas" />
+                    <img className="thumb" src={`${import.meta.env.BASE_URL}ideas.webp`} alt="Wild ideas" />
                     <div>
                       <h3 className="stageHead">WILD IDEAS</h3>
                       <p className="stageText">

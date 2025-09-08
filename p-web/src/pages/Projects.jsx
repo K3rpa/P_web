@@ -33,7 +33,7 @@ export const projects = [
       demo: "https://www.youtube.com/watch?v=w0YKCoaPrCU",
       external: "https://habithop.netlify.app/",
     },
-    thumb: "/habit_stacker_pic.png",
+    thumb: `${import.meta.env.BASE_URL}habit_stacker_pic.png`,
   },
   {
     id: "p2",
@@ -54,7 +54,7 @@ export const projects = [
     links: {
       repo: "https://github.com/r-butl/TextBasedImageSearch",
     },
-    thumb: "/search_tool_pic.png",
+    thumb: `${import.meta.env.BASE_URL}search_tool_pic.png`,
   },
   {
     id: "p3",
@@ -77,7 +77,7 @@ export const projects = [
       demo: "https://www.youtube.com/watch?v=d-ju9s9O6Hw",
       external: "https://docs.google.com/document/d/1FGDz04GW7XZqyYmeO3mc6lRoJhomvn5pxqIf1NyiQWQ/edit?tab=t.0",
      },
-    thumb: "/bot_pic.png",
+    thumb: `${import.meta.env.BASE_URL}bot_pic.png`,
   },
   {
     id: "p4",
@@ -96,7 +96,7 @@ export const projects = [
       languages: ["Python", "YAML", "Shell"],
       tools: ["GCP", "Ansible", "Docker", "Kubernetes", "GitLab CI/CD"],
     },
-    thumb: "/devops.png",
+    thumb: `${import.meta.env.BASE_URL}devops.png`,
   },
   {
     id: "p5",
@@ -116,7 +116,7 @@ export const projects = [
       tools: ["Flutter", "Android Studio", "Firebase", "Google Authentication"],
     },
     links: { repo: "https://github.com/csuchico-csci467/CINS467-S23-Boxi-Chen" },
-    thumb: "/ASL.png",
+    thumb: `${import.meta.env.BASE_URL}ASL.png`,
   },
   {
     id: "p6",
@@ -136,7 +136,7 @@ export const projects = [
       tools: ["Django", "React Native", "Yelp API"],
     },
     links: { repo: "https://github.com/ChicoState/BudgetTravel" },
-    thumb: "travel.png",
+    thumb: `${import.meta.env.BASE_URL}travel.png`,
   },
   {
     id: "p7",
@@ -158,7 +158,7 @@ export const projects = [
       repo: "https://github.com/K3rpa/CSCI611_Spring25_Boxi_Chen/tree/A3",
       demo: "https://www.youtube.com/watch?v=Miidpg8KKZc&feature=youtu.be",
      },
-    thumb: "/yolo.jpg",
+    thumb: `${import.meta.env.BASE_URL}yolo.jpg`,
   },
   {
     id: "p8",
@@ -177,7 +177,7 @@ export const projects = [
       tools: ["PyTorch", "VGG"],
     },
     links: { repo: "https://github.com/K3rpa/CSCI611_Spring25_Boxi_Chen/tree/A4" },
-    thumb: "/style.jpg",
+    thumb: `${import.meta.env.BASE_URL}style.jpg`,
   },
 ];
 

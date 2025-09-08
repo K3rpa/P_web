@@ -30,21 +30,21 @@ export default function App() {
       id: 1,
       title: "Habit Stacker",
       tag: "Website Design and Deployment",
-      img: "/habit_stacker_pic.png",
+      img:  `${import.meta.env.BASE_URL}habit_stacker_pic.png`,
       link: "https://github.com/pnidhi26/habit-hop"
     },
     {
       id: 2,
       title: "Text-Based Image Search",
       tag: "Machine Learning desgin and implement",
-      img: "/search_tool_pic.png",
+      img: `${import.meta.env.BASE_URL}search_tool_pic.png`,
       link: "https://github.com/r-butl/TextBasedImageSearch"
     },
     {
       id: 3,
       title: "Memory Architecture for Generative Agent",
       tag: "LLM Agent Memory Design",
-      img: "/bot_pic.png ",
+      img: `${import.meta.env.BASE_URL}bot_pic.png`,
       link:"https://github.com/K3rpa/LLM_based_agent_simulation"
     },
   ];
@@ -56,7 +56,7 @@ export default function App() {
         <div style={styles.left}>
           <div style={styles.photoWrap}>
             <div style={styles.blob} aria-hidden />
-            <img src="/self_pic.jpg" alt="Portrait of Boxi Chen" style={styles.photo} />
+            <img src={`${import.meta.env.BASE_URL}self_pic.jpg`} alt="Portrait of Boxi Chen" style={styles.photo} />
           </div>
         </div>
 
@@ -104,7 +104,7 @@ export default function App() {
             >
             <Link to={w.link} style={styles.cardLink}>
               <div style={styles.thumbWrap}>
-                <img src={w.img || "/web_home_self.jpg"} alt={w.title} style={styles.thumb} />
+                <img src={w.img || "*"} alt={w.title} style={styles.thumb} />
               </div>
               <div style={styles.cardBody}>
                 <h3 style={styles.cardTitle}>{w.title}</h3>
